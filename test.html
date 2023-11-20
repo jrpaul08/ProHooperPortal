@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Stats_data_vis.js"></script>
+    <title>Show/Hide Elements</title>
+</head>
+<body>
+
+    <label for="selectCategory">Select a Category:</label>
+    <select id="selectCategory" onchange="showSelectedTable()">
+        <option value="" selected disabled>Select a Category</option>
+        <option value="PPG">PPG (Points Per Game) </option>
+        <option value="APG"> APG (Assist Per Game) </option>
+        <option value="BPG">BPG (Blocks Per Game) </option>
+        <option value="RPG">RPG (Rebounds Per Game)</option>
+        <option value="TeamStandings">Team Standings</option>
+    </select> 
+
+    <table id="tablePPG" class="hidden">
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>PPG</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Luka Doncic</td>
+                <td>32.9</td>
+            </tr>
+            <tr>
+                <td>Joel Embiid</td>
+                <td>31.9</td>
+            </tr>
+            <tr>
+                <td>Donovan Mitchell</td>
+                <td>30.7</td>
+            </tr>
+            <tr>
+                <td>Kevin Durant</td>
+                <td>30.2</td>
+            </tr>
+            <tr>
+                <td>Stephen Curry</td>
+                <td>30.0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="tableAPG" class="hidden">
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>APG</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tyrese Haliburton</td>
+                <td>11.6</td>
+            </tr>
+            <tr>
+                <td>Trae Young</td>
+                <td>10.1</td>
+            </tr>
+            <tr>
+                <td>LaMelo Ball</td>
+                <td>8.6</td>
+            </tr>
+            <tr>
+                <td>Luka Doncic</td>
+                <td>8.4</td>
+            </tr>
+            <tr>
+                <td>Dennis Schroder</td>
+                <td>8.4</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="tableBPG" class="hidden">
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>BPG</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Anthony Davis</td>
+                <td>3.0</td>
+            </tr>
+            <tr>
+                <td>Daniel Gafford</td>
+                <td>2.8</td>
+            </tr>
+            <tr>
+                <td>Victor Wembanyama</td>
+                <td>2.6</td>
+            </tr>
+            <tr>
+                <td>Chet Holmgren</td>
+                <td>2.3</td>
+            </tr>
+            <tr>
+                <td>Joel Embiid</td>
+                <td>2.3</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="tableRPG" class="hidden">
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>RPG</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Rudy Gobert</td>
+                <td>13.1</td>
+            </tr>
+            <tr>
+                <td>Nikola Jokic</td>
+                <td>12.9</td>
+            </tr>
+            <tr>
+                <td>Deandre Ayton</td>
+                <td>12.9</td>
+            </tr>
+            <tr>
+                <td>Domantas Sabonis</td>
+                <td>12.9</td>
+            </tr>
+            <tr>
+                <td>Mitchell Robinson</td>
+                <td>12.4</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="tableEastern" class="hidden">
+        <caption>Eastern Conference</caption>
+        <thead>
+            <tr>
+                <th>Standings</th>
+                <th>Team</th>
+                <th>Wins</th>
+                <th>Losses</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>76ers</td>
+                <td>7</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Celtics</td>
+                <td>7</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <table id="tableWestern" class="hidden">
+        <caption>Western Conference</caption>
+        <thead>
+            <tr>
+                <th>Standings</th>
+                <th>Team</th>
+                <th>Wins</th>
+                <th>Losses</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Nuggets</td>
+                <td>8</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Mavericks</td>
+                <td>7</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <canvas id="barChart" class="hidden" width="400" height="200"></canvas>
+    
+
+    <!-- Your existing closing body and html tags -->
+</body>
+</html>

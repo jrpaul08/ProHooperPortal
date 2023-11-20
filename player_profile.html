@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player_profile</title>
+    <link rel="stylesheet" href="styles/player_profile.css">
+    <link rel="stylesheet" href="styles/header-footer.css">
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="header-left">
+                <div class="header-title">
+                    <img class="header-logo" src="images/logo.png" alt="website Logo">
+                    <h1>PRO HOOPER PORTAL</h1>
+                </div>
+                <h3>Stay Updated With The Latest NBA Stats</h3>
+                <p>Author: Jared Paul<p>
+                <p>Last Modified: September 30, 2023</p>
+            </div>
+
+            <nav class="header-nav-wrapper">    
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="players.html">Players</a></li>
+                    <li><a href="teams.html">Teams</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        
+        </div>
+        <div class="search">
+            <h3>Explore Player Profiles</h3>
+            <p>Includes description and stats</p>
+            <div class="search-bar">
+                <form  action="player_profile.html" autocomplete="off">
+                    <div>
+                        <input type="text" id="input" placeholder="Type a name here..." />
+                        <input type="submit" value="Search">
+                    </div>
+                    <ul class="list"></ul>
+                </form>
+            </div>
+        </div>
+        <div class="profile-container">
+            <div class="image-container">
+                <img class="player_prof_img" src="images/steph-1.png" id="player-image" alt="player_prof_img">
+            </div>
+            <div class="profile-box">
+                <h1 class="player_heading"><span id="player-name">-</span></h1>
+                <div class="player-info">
+                    <p><strong>Age:</strong> <span id="player-age">-</span></p>
+                    <p><strong>Height:</strong> <span id="player-height">-</span></p>
+                    <p><strong>Weight:</strong> <span id="player-weight">-</span></p>
+                    <p><strong>PPG:</strong> <span id="player-ppg">-</span></p>
+                    <p><strong>RPG:</strong> <span id="player-rpg">-</span></p>
+                    <p><strong>APG:</strong> <span id="player-apg">-</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="copyright"><span>&copy;</span> ProPortalHooper</p>
+
+            <div class="footer-links">
+                <p>Privacy | Terms and Conditions</p>
+                <div class="socials">
+                    <a href="https://www.instagram.com"><img class="instagram" src="images/instagram_icon.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com"><img class="facebook" src="images/fb_icon.png" alt="Facebook"></a>
+                    <a href="https://www.linkedin.com"><img class="linkedin" src="images/linkedin_icon.png" alt="linkedin"></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="autocomplete_search.js"></script>
+    <script src="display_player_info.js"></script>
+</body>
+</html>

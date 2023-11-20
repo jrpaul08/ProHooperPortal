@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/header-footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Stats_data_vis.js"></script>
+
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="header-left">
+                <div class="header-title">
+                    <img class="header-logo" src="images/logo.png" alt="website Logo">
+                    <h1>PRO HOOPER PORTAL</h1>
+                </div>
+                <h3>Stay Updated With The Latest NBA Stats</h3>
+                <p>Author: Jared Paul<p>
+                <p>Last Modified: September 30, 2023</p>
+            </div>
+
+            <nav class="header-nav-wrapper">    
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="players.html">Players</a></li>
+                    <li><a href="teams.html">Teams</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        
+        </div>
+        <div class="team-standings">
+            <h2>
+                Welcome to our Basketball Statistics website!
+            </h2> 
+            <div class="container">     
+                <div class = "image-container">
+                    <img src="images/basketball_img.jpg" alt="Basketball Image">
+                </div>
+            
+                <div class = "text-container">
+                    <p> Our platform is dedicated to providing you with a comprehensive understanding of the game, offering a wealth of data-driven insights, player performances, and team trends. Whether you're a passionate fan, a fantasy basketball enthusiast, or a professional analyst, our curated collection of statistical analyses and visualizations aims to elevate your understanding of the sport. Dive into the world of basketball analytics with us and unlock a new level of appreciation for the nuances and brilliance that define this dynamic game</p>
+                </div>
+            </div>
+        </div>
+
+            <!-- <table class = "standings-table" border = 1>
+                <tr>
+                    <th>Standings</th>
+                    <th>Team</th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Team 1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Team 2</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Team 3</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Team 5</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Team 5</td>
+                    <td>0</td>
+                    <td>0</td>
+
+                </tr>
+            </table> -->
+       
+        <div class="Statistics">
+            <h3>View The Latest Statistics in the League</h3>
+            <div>
+                <label for="selectCategory"></label>
+                <select id="selectCategory" onchange="showSelectedTable()">
+                    <option value="" selected disabled>Select a Category</option>
+                    <option value="PPG">PPG (Points Per Game) </option>
+                    <option value="APG"> APG (Assist Per Game) </option>
+                    <option value="BPG">BPG (Blocks Per Game) </option>
+                    <option value="RPG">RPG (Rebounds Per Game)</option>
+                    <option value="TeamStandings">Team Standings</option>
+                </select> 
+            </div>
+        </div>
+        <div class="category-tables">
+        
+            <table id="tablePPG" class="hidden">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>PPG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Luka Doncic</td>
+                        <td>32.9</td>
+                    </tr>
+                    <tr>
+                        <td>Joel Embiid</td>
+                        <td>31.9</td>
+                    </tr>
+                    <tr>
+                        <td>Donovan Mitchell</td>
+                        <td>30.7</td>
+                    </tr>
+                    <tr>
+                        <td>Kevin Durant</td>
+                        <td>30.2</td>
+                    </tr>
+                    <tr>
+                        <td>Stephen Curry</td>
+                        <td>30.0</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <table id="tableAPG" class="hidden">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>APG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tyrese Haliburton</td>
+                        <td>11.6</td>
+                    </tr>
+                    <tr>
+                        <td>Trae Young</td>
+                        <td>10.1</td>
+                    </tr>
+                    <tr>
+                        <td>LaMelo Ball</td>
+                        <td>8.6</td>
+                    </tr>
+                    <tr>
+                        <td>Luka Doncic</td>
+                        <td>8.4</td>
+                    </tr>
+                    <tr>
+                        <td>Dennis Schroder</td>
+                        <td>8.4</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <table id="tableBPG" class="hidden">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>BPG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Anthony Davis</td>
+                        <td>3.0</td>
+                    </tr>
+                    <tr>
+                        <td>Daniel Gafford</td>
+                        <td>2.8</td>
+                    </tr>
+                    <tr>
+                        <td>Victor Wembanyama</td>
+                        <td>2.6</td>
+                    </tr>
+                    <tr>
+                        <td>Chet Holmgren</td>
+                        <td>2.3</td>
+                    </tr>
+                    <tr>
+                        <td>Joel Embiid</td>
+                        <td>2.3</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <table id="tableRPG" class="hidden">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>RPG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rudy Gobert</td>
+                        <td>13.1</td>
+                    </tr>
+                    <tr>
+                        <td>Nikola Jokic</td>
+                        <td>12.9</td>
+                    </tr>
+                    <tr>
+                        <td>Deandre Ayton</td>
+                        <td>12.9</td>
+                    </tr>
+                    <tr>
+                        <td>Domantas Sabonis</td>
+                        <td>12.9</td>
+                    </tr>
+                    <tr>
+                        <td>Mitchell Robinson</td>
+                        <td>12.4</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <table id="tableEastern" class="hidden">
+                <caption>Eastern Conference</caption>
+                <thead>
+                    <tr>
+                        <th>Standings</th>
+                        <th>Team</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>76ers</td>
+                        <td>7</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Celtics</td>
+                        <td>7</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>A</td>
+                        <td>5</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>B</td>
+                        <td>5</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>C</td>
+                        <td>3</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table id="tableWestern" class="hidden">
+                <caption>Western Conference</caption>
+                <thead>
+                    <tr>
+                        <th>Standings</th>
+                        <th>Team</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Nuggets</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Mavericks</td>
+                        <td>7</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>X</td>
+                        <td>6</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Y</td>
+                        <td>5</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Z</td>
+                        <td>4</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <canvas id="barChart" class="hidden" width="15" height="5"></canvas>
+ 
+        <div class="footer">
+            <p class="copyright"><span>&copy;</span> ProPortalHooper</p>
+
+            <div class="footer-links">
+                <p>Privacy | Terms and Conditions</p>
+                <div class="socials">
+                    <a href="https://www.instagram.com"><img class="instagram" src="images/instagram_icon.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com"><img class="facebook" src="images/fb_icon.png" alt="Facebook"></a>
+                    <a href="https://www.linkedin.com"><img class="linkedin" src="images/linkedin_icon.png" alt="linkedin"></a>
+
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

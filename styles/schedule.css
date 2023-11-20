@@ -1,0 +1,32 @@
+/* -------------------------BODY STYLING------------------------ */
+
+.schedule{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+}
+
+.schedule-table{
+    width: 80%;
+}
+
+.schedule-table th{
+    background-color: #d42222;
+    color: #fff;
+    padding: 10px;
+}
+
+.schedule-table tr{
+    background-color: #255998;
+    color: #fff;
+    height: 40px;
+}
