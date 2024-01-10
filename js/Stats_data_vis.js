@@ -62,7 +62,12 @@ function showSelectedTable() {
 
 function updateBarChart(category) {
     category = category;
-    var ctx = document.getElementById('barChart').getContext('2d');
+    var canvas = document.getElementById('barChart');
+    var ctx = canvas.getContext('2d');
+
+    // Set aria-label for accessibility
+    canvas.setAttribute('aria-label', 'Bar chart displaying ' + category + ' data');
+
 
     if (window.myChart) {
         window.myChart.destroy();
